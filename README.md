@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Devntric Travels & Tours
 
 A complete, production-ready travel agency website built with React (Vite), React Router, Framer Motion, React Icons, Swiper.js, and EmailJS — for **Devntric Travels & Tours**.
@@ -196,3 +197,6 @@ devntric-travels/
 - All images are sourced from Unsplash for demo purposes — replace with your own licensed photography before going live.
 - Phone numbers, email addresses, and the office address used throughout are placeholders — update them in `src/data/data.js`, `Footer.jsx`, `Navbar.jsx`, and `Contact.jsx`.
 - The Google Map embed uses placeholder coordinates — update per the instructions above.
+=======
+# touring
+>>>>>>> 7e2885ad085e1bdf044568bf4e08c4ffe36284a5
