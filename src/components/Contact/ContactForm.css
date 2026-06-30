@@ -1,0 +1,112 @@
+.contact-form {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--light-gray);
+}
+
+.contact-form__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.contact-form__subtitle {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.contact-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.contact-form__field label {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact-form__field input,
+.contact-form__field select,
+.contact-form__field textarea {
+  padding: 13px 16px;
+  border: 1.5px solid var(--mid-gray);
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  background: var(--off-white);
+  outline: none;
+  transition: var(--transition);
+  font-family: var(--font-body);
+  resize: vertical;
+}
+
+.contact-form__field input:focus,
+.contact-form__field select:focus,
+.contact-form__field textarea:focus {
+  border-color: var(--secondary);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12);
+}
+
+.contact-form__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.contact-form__submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.contact-form__alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.contact-form__alert--success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.contact-form__alert--error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #B91C1C;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 26px 22px;
+  }
+  .contact-form__row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,349 @@
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.55) 0%,
+    rgba(15, 23, 42, 0.4) 50%,
+    rgba(15, 23, 42, 0.85) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding-top: calc(var(--nav-height) + 48px);
+  padding-bottom: 180px;
+}
+
+.hero__text {
+  max-width: 640px;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  backdrop-filter: blur(8px);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.hero__title-highlight {
+  color: var(--accent);
+  display: block;
+}
+
+.hero__subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  margin-bottom: 36px;
+  max-width: 500px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 48px;
+}
+
+.hero__play {
+  width: 28px;
+  height: 28px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+/* STATS */
+.hero__stats {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 28px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  width: fit-content;
+}
+
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.hero__stat-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hero__stat-label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+}
+
+.hero__stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* SEARCH */
+.hero__search-wrap {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.hero__search {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: 20px 24px;
+}
+
+.hero__search-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.hero__search-fields {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.hero__search-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 160px;
+  padding: 8px 12px;
+}
+
+.hero__search-icon {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.hero__search-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.hero__search-input label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero__search-input input,
+.hero__search-input select {
+  border: none;
+  outline: none;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  background: none;
+  width: 100%;
+  padding: 0;
+}
+
+.hero__search-input select {
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.hero__search-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--mid-gray);
+  flex-shrink: 0;
+}
+
+.hero__search-btn {
+  flex-shrink: 0;
+  border-radius: var(--radius-lg) !important;
+  padding: 13px 24px !important;
+}
+
+/* INDICATORS */
+.hero__indicators {
+  position: absolute;
+  bottom: 100px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 3;
+}
+
+.hero__indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.hero__indicator--active {
+  background: var(--accent);
+  width: 8px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+/* SCROLL CUE */
+.hero__scroll {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.hero__scroll-dot {
+  width: 4px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 2px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .hero__search-fields {
+    gap: 2px;
+  }
+  .hero__search-divider {
+    display: none;
+  }
+  .hero__search-field {
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__content {
+    padding-bottom: 260px;
+  }
+  .hero__stats {
+    gap: 16px;
+    padding: 16px 20px;
+  }
+  .hero__search {
+    border-radius: var(--radius-lg);
+  }
+  .hero__search-fields {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero__search-field {
+    width: 100%;
+    background: var(--light-gray);
+    border-radius: var(--radius-md);
+    padding: 10px 14px;
+  }
+  .hero__search-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero__indicators {
+    bottom: 180px;
+  }
+  .hero__scroll {
+    display: none;
+  }
+  .hero__search-wrap {
+    bottom: -60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 2.3rem;
+  }
+  .hero__actions {
+    flex-direction: column;
+  }
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero__stat-num {
+    font-size: 1.2rem;
+  }
+  .hero__content {
+    padding-bottom: 300px;
+  }
+}

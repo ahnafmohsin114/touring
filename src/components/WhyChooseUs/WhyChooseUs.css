@@ -1,0 +1,121 @@
+.why {
+  background: var(--off-white);
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.why__card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--light-gray);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.why__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--icon-color);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.why__card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.why__card:hover::before {
+  opacity: 1;
+}
+
+.why__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--icon-color) 12%, transparent);
+  color: var(--icon-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+
+.why__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.why__desc {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+/* TRUST BAR */
+.why__trust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 28px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--light-gray);
+}
+
+.why__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-right: 1px solid var(--light-gray);
+}
+
+.why__trust-item:last-child {
+  border-right: none;
+}
+
+.why__trust-icon {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .why__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .why__grid {
+    grid-template-columns: 1fr;
+  }
+  .why__trust-item {
+    border-right: none;
+    border-bottom: 1px solid var(--light-gray);
+    width: 100%;
+  }
+  .why__trust-item:last-child {
+    border-bottom: none;
+  }
+}

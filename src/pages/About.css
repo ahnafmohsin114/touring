@@ -1,0 +1,210 @@
+.about__story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about__story-image {
+  position: relative;
+}
+
+.about__story-image img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.about__story-badge {
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  background: var(--accent);
+  color: var(--primary);
+  padding: 20px 28px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.about__story-badge span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about__story-badge p {
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.about__story-text p {
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-size: 0.96rem;
+}
+
+/* MISSION/VISION */
+.about__mv {
+  background: var(--off-white);
+}
+
+.about__mv-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--light-gray);
+}
+
+.about__mv-icon {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 18px;
+}
+
+.about__mv-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.about__mv-card p {
+  color: var(--text-gray);
+  line-height: 1.75;
+}
+
+/* VALUES */
+.about__value {
+  text-align: center;
+  padding: 28px 20px;
+}
+
+.about__value-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin: 0 auto 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.about__value h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.about__value p {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  line-height: 1.65;
+}
+
+/* TEAM */
+.about__team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.about__team-card {
+  text-align: center;
+}
+
+.about__team-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  border: 4px solid var(--light-gray);
+}
+
+.about__team-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.about__team-role {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.about__team-card p {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* TRUST */
+.about__trust {
+  background: var(--off-white);
+}
+
+.about__trust-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.about__trust-inner img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.about__trust-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.about__trust-list li {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .about__story,
+  .about__trust-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about__team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about__trust-inner {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__team-grid {
+    grid-template-columns: 1fr;
+  }
+  .about__story-badge {
+    position: static;
+    margin-top: -40px;
+    width: fit-content;
+  }
+}

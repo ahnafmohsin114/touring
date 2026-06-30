@@ -1,0 +1,56 @@
+.faq-page__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.faq-page__filters .gallery-grid__filter {
+  padding: 9px 22px;
+  border-radius: var(--radius-full);
+  background: var(--light-gray);
+  color: var(--text-dark);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.faq-page__filters .gallery-grid__filter:hover {
+  background: var(--mid-gray);
+}
+
+.faq-page__filters .gallery-grid__filter.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.faq-page__cta {
+  max-width: 500px;
+  margin: 60px auto 0;
+  text-align: center;
+  background: var(--off-white);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  border: 1px solid var(--light-gray);
+}
+
+.faq-page__cta-icon {
+  font-size: 2.2rem;
+  color: var(--secondary);
+  margin-bottom: 14px;
+}
+
+.faq-page__cta h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.faq-page__cta p {
+  font-size: 0.92rem;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+}
